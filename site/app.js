@@ -95,18 +95,20 @@ if (inspectionButtons.length) {
   });
 
   const dialog = select("#hold-dialog");
-  const reserve = select("#open-hold");
-  const amount = select("#hold-amount");
-  reserve.addEventListener("click", () => {
-    dialog.showModal();
-    amount.focus();
-  });
-  dialog.addEventListener("close", () => reserve.focus());
-  select("#hold-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    select("#hold-status").textContent = "Demo reservation previewed for " + amount.valueAsNumber + " m².";
-    dialog.close();
-  });
+  if (dialog) {
+    const reserve = select("#open-hold");
+    const amount = select("#hold-amount");
+    reserve.addEventListener("click", () => {
+      dialog.showModal();
+      amount.focus();
+    });
+    dialog.addEventListener("close", () => reserve.focus());
+    select("#hold-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      select("#hold-status").textContent = "Demo reservation previewed for " + amount.valueAsNumber + " m².";
+      dialog.close();
+    });
+  }
 }
 
 const departures = Array.from(document.querySelectorAll('input[name="sailing"]'));

@@ -1,21 +1,9 @@
-# Ilhmnra portfolio design brief
+# Ilhmnra portfolio
 
-## Audience and goal
+The opening gives one project the floor. The tile junction and four crop corners mark an area to inspect. The mark moves to the view index beside the changing caption, where it identifies which kind of evidence the visitor is seeing. The Night Ferry chapter uses the same four corners to isolate the workable transfer window. The inquiry brings the device back at architectural scale and frames three questions a client can answer.
 
-Prospective clients should find web and mobile app work and understand how Ilhmnra designs for a difficult decision. The home page moves from the service to two interactive cases and then to the public GitHub inquiry, the verified profile, and a copyable brief.
+The base is limestone and charcoal with a deep kiln-red accent. Manrope is the identity type, with tight display spacing and wider service copy. The ferry chapter uses deep harbor blue and pale green to distinguish the transit context. Prototype typography and interaction states stay local to each project.
 
-## Art direction
+Counterform opens on material evidence and questions of wear, size and available stock. Night Ferry opens on the actual time shortfall before the timetable. Both preserve direct access to the working demos.
 
-The portfolio uses warm paper, plum, large Newsreader display type, and Manrope navigation. The two case previews contrast terracotta and mint on deep blue. Counterform uses original generated material photographs and a specimen-style information panel. Night Ferry uses a CSS route diagram and compact scheduling typography.
-
-## Counterform
-
-A designer or contractor wants to know whether to specify a lot. Start with the surface, then offer edge and installed-scale views with the facts anchored in a separate panel. On mobile the viewer and its controls sit before the material specifications. The photograph fades in on selection for 220 ms. Caption, selection and shell update immediately, including when reduced motion is enabled or imagery fails. The native reservation dialog returns focus to the lot action.
-
-## Night Ferry
-
-A late-night rider wants to know whether the last transfer is possible. The departure options stay above the computed transfer gap. Compare 16 minutes for the earlier boat with 5 minutes for the later one, against an 8-minute walk. The map stacks above controls on mobile with a tighter vertical crop so the transfer stays near the opening view. The panel background eases for 180 ms on selection, with the number and plain-language status updating immediately. Reduced motion makes the background change instantaneous. The saved selection stays in the current browser.
-
-## Acceptance
-
-Find both case studies from the opening page. Verify photos and headings at all three target widths. Complete both flows by keyboard and touch, test Escape and focus return, check both motion settings, and block optional media during a local smoke test. Verify the public deploy independently at its project URL.
+The corner mark follows scroll only on larger screens with standard motion. The content and all active targets remain in document flow. Tablet at 834 px, narrow screens, and reduced motion each use the two resting marks in their respective sections.

@@ -43,6 +43,7 @@ async function run() {
         const response = await page.goto(base + part, {waitUntil:"networkidle"});
         assert.equal(response.status(), 200);
         await page.evaluate(async () => {
+          await document.fonts.load("400 20px Newsreader");
           await document.fonts.ready;
           await Promise.all([...document.images].map(image => image.decode()));
         });
@@ -62,11 +63,21 @@ async function run() {
         console.log(device, name, layout.title.trim().replace(/\s+/g," "), "fonts, assets and overflow OK");
       }
       await page.goto(base);
-      if (touch) await page.getByRole("link", {name:/Counterform/}).tap();
+      if (await page.locator(".inspection").count()) {
+        const homeEdge = page.getByRole("button", {name:"Edge",exact:true});
+        if (touch) await homeEdge.tap();
+        else await homeEdge.click();
+        assert.equal(await homeEdge.getAttribute("aria-pressed"), "true");
+        assert.match(await page.locator("#view-caption").textContent(), /18–22 mm/);
+        await page.locator("#lot-image img").evaluate(img => img.decode());
+        assert.match(await page.locator(".inspection-facts").textContent(), /28.4 m²/);
+        await page.goto(base);
+      }
+      if (touch) await page.getByRole("link", {name:"Open Counterform case study",exact:false}).tap();
       else {
         await page.keyboard.press("Tab");
         assert.equal(await page.locator(":focus").textContent(), "Skip to content");
-        const card = page.getByRole("link", {name:/Counterform/});
+        const card = page.getByRole("link", {name:"Open Counterform case study",exact:false});
         await card.focus();
         await page.keyboard.press("Enter");
       }
@@ -153,6 +164,11 @@ async function run() {
     }
     const fallback = await browser.newPage({viewport:sizes.mobile});
     await fallback.route("**/*.webp", route => route.abort());
+    await fallback.goto(base);
+    await fallback.waitForSelector(".opening-media img[data-failed]", {state:"attached"});
+    assert.ok(await fallback.getByRole("heading", {name:"Make the choice visible."}).isVisible());
+    await fallback.getByRole("button", {name:"Edge",exact:true}).click();
+    assert.match(await fallback.locator("#view-caption").textContent(), /18–22 mm/);
     await fallback.goto(base + "counterform/");
     await fallback.waitForSelector("#lot-image img[data-failed]",{state:"attached"});
     await fallback.getByRole("button",{name:"Edge",exact:true}).click();

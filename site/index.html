@@ -1,15 +1,125 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Web & mobile app design · Selected web and mobile design work by Ilhmnra."><title>Web & mobile app design — Ilhmnra</title><link rel="icon" href="assets/mark.png"><link rel="stylesheet" href="styles.css"><script defer src="app.js"></script></head><body class="home"><a class="skip" href="#main">Skip to content</a><header class="top wrap"><a class="wordmark" href="./" aria-label="Ilhmnra home"><span aria-hidden="true">✳</span> ilhmnra</a><nav aria-label="Main"><a href="#work">Work</a><a href="#contact">Contact ↗</a></nav></header>
-<main id="main" class="wrap">
-<section class="hero" aria-labelledby="home-title"><div class="hero-type"><p class="eyebrow"><span class="live-dot"></span> Independent UI/UX design</p><h1 id="home-title">Design for the<br class="desktop-break"> <em>next decision.</em></h1></div><div class="hero-intro"><p>I design websites and mobile apps that help people make decisions with confidence.</p><a class="button" href="#work">View selected work <span aria-hidden="true">↓</span></a></div></section>
-<section id="work" class="work" aria-labelledby="work-title"><div class="section-heading"><h2 id="work-title">Selected work</h2><span>Web product &amp; mobile app</span></div><div class="work-grid">
-<article class="project"><a class="project-link" href="counterform/"><div class="project-art clay-art"><img src="assets/surface.webp" width="1440" height="960" alt="Reclaimed terracotta tiles marked by wear and kiln color" data-optional-media fetchpriority="high"><span class="art-caption">COUNTERFORM <span>CF–024</span></span></div><div class="project-meta"><div><p class="eyebrow">Web product · Concept</p><h3>Counterform</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-description">Inspect reclaimed materials before reserving a lot.</p></a></article>
-<article class="project"><a class="project-link" href="night-ferry/"><div class="project-art night-art" aria-hidden="true"><div class="art-orbit"></div><div class="art-route"></div><div class="mini-phone"><div class="mini-bar"><span>Night Ferry</span><span>23:10</span></div><div class="mini-title">East Pier<br><span>→</span> Southbank</div><div class="mini-line"><i></i><i></i><i></i></div><div class="mini-data"><span>TRANSFER WINDOW</span><strong>16 <small>min</small></strong></div></div><span class="art-caption"><span></span><span>23:10 → 23:50</span></span></div><div class="project-meta"><div><p class="eyebrow">Mobile app · Concept</p><h3>Night Ferry</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-description">See if your late-night transfer is worth taking.</p></a></article>
-</div></section>
-<section id="contact" class="contact" aria-labelledby="contact-title"><div><p class="eyebrow">Project inquiries</p><h2 id="contact-title">What are you<br> working on?</h2></div><div class="contact-content"><p>Tell me what you’re building, who it’s for, and what you want to get right. We can agree on a channel for feedback and discuss the screens, flows, and timing.</p><div class="contact-actions"><a class="button" href="https://github.com/ilhmnra/design-portfolio/issues/new">Start a project inquiry <span aria-hidden="true">↗</span></a><button class="button secondary" type="button" id="open-brief" hidden>Copy a project brief</button></div><p class="inquiry-note">GitHub inquiries are public. Share a short introduction there and keep project details for a private conversation.</p></div></section>
-<dialog class="sheet" id="brief-dialog" aria-labelledby="brief-title"><div class="sheet-top"><h2 id="brief-title">Project brief</h2><form method="dialog"><button class="icon-button" aria-label="Close brief">×</button></form></div><p>Fill out these prompts and share the brief when we connect.</p><label for="brief-text">Brief template</label><textarea id="brief-text" rows="7">What are you building?
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ilhmnra designs websites and mobile apps around the choices their users need to make.">
+  <title>Ilhmnra — Web and mobile app design</title>
+  <link rel="icon" href="assets/mark.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="editorial.css">
+  <script defer src="app.js"></script>
+  <script defer src="sequence.js"></script>
+</head>
+<body class="home editorial">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top wrap"><a class="wordmark" href="./" aria-label="Ilhmnra home">ilhmnra<span aria-hidden="true">.</span></a><nav aria-label="Main"><a href="#work">Work</a><a href="#contact">Contact</a></nav></header>
+  <main id="main">
+    <section class="opening wrap" aria-labelledby="home-title">
+      <div class="opening-copy">
+        <p class="discipline">Independent web &amp; mobile app design</p>
+        <h1 id="home-title">Make the <br>choice <br>visible.</h1>
+        <p class="opening-intro">I design websites and apps that make it easier to see what matters before you act.</p>
+        <a href="#work" class="action-text">View selected work <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="opening-figure">
+        <div class="opening-media">
+          <picture>
+            <source media="(max-width: 700px)" srcset="assets/terracotta-hero-760.webp">
+            <img src="assets/terracotta-hero.webp" width="1536" height="1024" alt="Four weathered terracotta tiles meeting at a dark seam" fetchpriority="high" data-optional-media>
+          </picture>
+          <a class="specimen-anchor" href="counterform/" aria-label="Counterform case study: inspect the lot">
+            <span class="bracket opening-bracket" aria-hidden="true"></span>
+          </a>
+        </div>
+        <figcaption><a href="counterform/">Counterform <span aria-hidden="true">↗</span></a><span>Terracotta, lot CF–024</span></figcaption>
+      </figure>
+    </section>
+    <section class="evidence wrap" id="work" aria-labelledby="proof-title">
+      <div class="evidence-intro">
+        <p class="discipline">Counterform / Web product concept</p>
+        <h2 id="proof-title">A surface can hide<br> a chipped edge.</h2>
+        <p>For someone specifying reclaimed tile, finish and fit are different questions. The catalog gives each its own view and keeps the lot details in sight.</p>
+      </div>
+      <div class="inspection">
+        <div class="inspection-view">
+          <figure class="inspection-figure" id="lot-view">
+            <div class="cf-image" id="lot-image">
+              <span class="cf-placeholder" aria-hidden="true"></span>
+              <img src="assets/surface.webp" width="1440" height="960" alt="Top view of terracotta tiles with worn edges and a range of red and ochre tones" data-optional-media>
+            </div>
+            <figcaption>
+              <span class="index-frame"><span class="bracket proof-bracket" aria-hidden="true"></span><span class="view-index" id="view-index">01 / 03</span></span>
+              <span id="view-caption" role="status">Surface · Color and wear across the lot</span>
+            </figcaption>
+          </figure>
+          <div class="view-options" role="group" aria-label="Inspection angle">
+            <button type="button" data-view="surface" aria-controls="lot-view" aria-pressed="true">Surface</button>
+            <button type="button" data-view="edge" aria-controls="lot-view" aria-pressed="false">Edge</button>
+            <button type="button" data-view="scale" aria-controls="lot-view" aria-pressed="false">Installed scale</button>
+          </div>
+        </div>
+        <aside class="inspection-facts" aria-label="Material details">
+          <p class="discipline">Lot CF–024</p>
+          <h3>Kiln-fired terracotta</h3>
+          <dl><div><dt>Format</dt><dd>200 × 200 mm</dd></div><div><dt>Thickness</dt><dd>18–22 mm</dd></div><div><dt>Available</dt><dd>28.4 m²</dd></div></dl>
+          <a href="counterform/" class="action-text project-link">Open Counterform case study <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+    </section>
+    <section class="crossing" aria-labelledby="crossing-title">
+      <div class="wrap crossing-grid">
+        <div class="crossing-copy">
+          <p class="discipline">Night Ferry / Mobile app concept</p>
+          <h2 id="crossing-title">The last crossing.</h2>
+          <p>A timetable can tell you when the next boat leaves. A rider also needs to know whether the walk between piers fits.</p>
+          <a href="night-ferry/" class="action-text">Open Night Ferry case study <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="crossing-board" aria-label="Compare two fictional departures from East Pier">
+          <div class="crossing-route"><span>East Pier</span><span>Beacon Quay</span><span>Southbank</span></div>
+          <div class="crossing-readout">
+            <div><span>Depart 23:10</span><strong>16 <small>min</small></strong><span>Room to transfer</span></div>
+            <div><span>Depart 23:21</span><strong>5 <small>min</small></strong><span>Too tight</span></div>
+            <span class="bracket crossing-bracket" aria-hidden="true"></span>
+          </div>
+          <p>Allow 8 min to walk between piers.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="commission" aria-labelledby="contact-title">
+      <div class="wrap commission-grid">
+        <div class="commission-copy">
+          <p class="discipline">Project inquiries</p>
+          <h2 id="contact-title">What needs<br>to be clearer?</h2>
+          <p>Tell me where your users hesitate and what they need to do next.</p>
+          <div class="contact-actions"><a class="button" href="https://github.com/ilhmnra/design-portfolio/issues/new">Start a project inquiry <span aria-hidden="true">↗</span></a><button class="button secondary" type="button" id="open-brief" hidden>Copy a project brief</button></div>
+          <p class="inquiry-note">GitHub inquiries are public. Share a short introduction there and keep project details for a private conversation.</p>
+        </div>
+        <div class="brief-plate">
+          <span class="bracket close-bracket" aria-hidden="true"></span>
+          <ul class="brief-questions" aria-label="Questions for your brief">
+            <li>Who will use it?</li>
+            <li>Where do they hesitate?</li>
+            <li>What should happen next?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <dialog class="sheet" id="brief-dialog" aria-labelledby="brief-title">
+      <div class="sheet-top"><h2 id="brief-title">Project brief</h2><form method="dialog"><button class="icon-button" aria-label="Close brief">×</button></form></div>
+      <p>Fill out these prompts and share the brief when we connect.</p>
+      <label for="brief-text">Brief template</label>
+      <textarea id="brief-text" rows="7">What are you building?
 Who is it for?
 Which screens or flows need work?
 What should happen after launch?
 What is your timeline?
-Where can we discuss feedback?</textarea><button class="button" id="copy-brief" type="button">Copy brief</button><p class="status" id="brief-status" role="status"></p></dialog>
-</main><footer class="foot wrap"><a class="wordmark" href="./"><span aria-hidden="true">✳</span> ilhmnra</a><span>Independent UI/UX design</span><a href="https://github.com/ilhmnra">GitHub ↗</a></footer></body></html>
+Where can we discuss feedback?</textarea>
+      <button class="button" id="copy-brief" type="button">Copy brief</button>
+      <p class="status" id="brief-status" role="status"></p>
+    </dialog>
+  </main>
+  <footer class="foot wrap"><a class="wordmark" href="./">ilhmnra<span aria-hidden="true">.</span></a><span>Independent web and mobile app design</span><a href="https://github.com/ilhmnra">GitHub ↗</a></footer>
+  <span class="bracket traveling-bracket" aria-hidden="true"></span>
+</body>
+</html>
