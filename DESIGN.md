@@ -1,9 +1,7 @@
 # Ilhmnra portfolio
 
-The opening gives one project the floor. The tile junction and four crop corners mark an area to inspect. The mark moves to the view index beside the changing caption, where it identifies which kind of evidence the visitor is seeing. The Night Ferry chapter uses the same four corners to isolate the workable transfer window. The inquiry brings the device back at architectural scale and frames three questions a client can answer.
+A prospective client sees the design service, then two different ways a product can clarify a decision. The opening is type-led within an 1112 px envelope. The waterfront starts at that measure, then expands as the text exits. It gives way to a time comparison and a material inspection, each with a different scale and color.
 
-The base is limestone and charcoal with a deep kiln-red accent. Manrope is the identity type, with tight display spacing and wider service copy. The ferry chapter uses deep harbor blue and pale green to distinguish the transit context. Prototype typography and interaction states stay local to each project.
+A horizontal datum keeps the reading connected. It aligns the opening and work labels, carries a genuine minute scale in the ferry section, divides equally weighted views for the tile, then groups the brief questions. The measurements are local to the concepts. Night Ferry shows actual fictional schedule arithmetic, including the eight minutes needed for a walk. Counterform uses realistic demo dimensions and a three-angle viewer.
 
-Counterform opens on material evidence and questions of wear, size and available stock. Night Ferry opens on the actual time shortfall before the timetable. Both preserve direct access to the working demos.
-
-The corner mark follows scroll only on larger screens with standard motion. The content and all active targets remain in document flow. Tablet at 834 px, narrow screens, and reduced motion each use the two resting marks in their respective sections.
+The palette uses limestone, charcoal, kiln red and a deep harbor color. The case studies keep their own character and working interactions. Standard motion on screens at least 700 px widens the still and builds the comparison. Narrow and reduced-motion views show the complete composition immediately. Both keep the same labels and links.

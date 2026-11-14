@@ -45,7 +45,7 @@ async function run() {
         await page.evaluate(async () => {
           await document.fonts.load("400 20px Newsreader");
           await document.fonts.ready;
-          await Promise.all([...document.images].map(image => image.decode()));
+          await Promise.all([...document.images].filter(image => image.loading !== "lazy").map(image => image.decode()));
         });
         const layout = await page.evaluate(() => ({
           scroll: document.documentElement.scrollWidth,
@@ -86,7 +86,7 @@ async function run() {
       if (touch) await inspection.tap();
       else {
         await inspection.focus();
-        assert.equal(await inspection.evaluate(node => getComputedStyle(node).outlineWidth), "3px");
+        assert.equal(await inspection.evaluate(node => getComputedStyle(node).outlineWidth), "2px");
         await page.keyboard.press("Space");
       }
       assert.equal(await inspection.getAttribute("aria-pressed"), "true");
@@ -165,8 +165,8 @@ async function run() {
     const fallback = await browser.newPage({viewport:sizes.mobile});
     await fallback.route("**/*.webp", route => route.abort());
     await fallback.goto(base);
-    await fallback.waitForSelector(".opening-media img[data-failed]", {state:"attached"});
-    assert.ok(await fallback.getByRole("heading", {name:"Make the choice visible."}).isVisible());
+    await fallback.waitForSelector(".waterfront img[data-failed]", {state:"attached"});
+    assert.ok(await fallback.getByRole("heading", {name:"Make the next step clear."}).isVisible());
     await fallback.getByRole("button", {name:"Edge",exact:true}).click();
     assert.match(await fallback.locator("#view-caption").textContent(), /18–22 mm/);
     await fallback.goto(base + "counterform/");
